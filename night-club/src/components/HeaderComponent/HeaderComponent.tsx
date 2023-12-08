@@ -1,4 +1,4 @@
-import '.HeaderComponent.scss';
+import './HeaderComponent.scss';
 function HeaderComponent() {
     return ( 
         <header>
