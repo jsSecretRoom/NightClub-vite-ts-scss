@@ -1,0 +1,40 @@
+header{
+    width: 100%;
+    min-height: 80px;
+    background-color: #242424;
+    box-sizing: border-box;
+    nav{
+        padding: 20px 60px;
+        display: flex;
+        justify-content: space-between;
+        .club-logo{
+            padding-right: 40px;
+        }
+        ul{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            column-gap: 40px;
+            li{
+
+            }
+        }
+        .features{
+            display: flex;
+            align-items: center;
+            padding-left: 40px;
+            column-gap: 20px;
+            button{
+                width: auto;
+                height: auto;
+                padding: auto;
+                margin: auto;
+                
+                img{
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+        }
+    }
+}

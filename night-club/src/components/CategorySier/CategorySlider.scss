@@ -1,0 +1,17 @@
+.category-slier {
+    
+    .categiris {
+        ul{
+            display: flex;
+            justify-content: space-around;
+            li{
+                font-size: 26px;
+                border: 2px solid rgb(255, 255, 255);
+                border-radius: 50px;
+                padding: 0 20px;
+            }
+        }
+    }
+    .slider {
+    }
+}

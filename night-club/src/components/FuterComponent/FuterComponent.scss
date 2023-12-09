@@ -1,0 +1,34 @@
+footer{
+    background-color: #41464D;
+    width: 100%;
+    flex-direction: row;
+
+    .footer-conteiner{
+        display: flex;
+        flex-direction: column;
+        @media (min-width: 600px) {
+            flex-direction: row;
+        }
+        .dropdowns{
+
+            .drop-group{
+                padding: 20px 20px 0 20px ;
+                display: flex;
+                column-gap: 20px;
+                flex-wrap:wrap;
+                width: auto;
+                height: auto;
+                @media (min-width: 1200px) {
+                    flex-wrap: nowrap;
+                }
+                @media (min-width: 1920px) {
+                    height: 300px;
+                    width: auto;
+                }
+            }
+
+        }
+        
+    }
+    
+}

@@ -22,7 +22,6 @@ function AutorizationPage() {
                             <NavLink to="/registration">Register now!</NavLink>
                         </div>
                         <NavLink to="/home"><button type='submit'>Log in</button></NavLink>
-                        
                     </form>
                 </section>
             </div>

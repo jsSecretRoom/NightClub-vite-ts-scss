@@ -7,6 +7,8 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 1);
 
+  background: url('./assets//img/bacground.svg') 0 0/cover no-repeat;
+  
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -86,6 +88,12 @@ h3 {
 h4 {
   font-size: clamp(1.2em, 5vw, 2em);
 }
+h5 {
+  font-size: clamp(1em, 4vw, 1.5em);
+}
+h6 {
+  font-size: clamp(0.8em, 4vw, 1em);
+}
 
 ul li {
   list-style: none;
@@ -139,6 +147,7 @@ button {
   width: 270px;
   height: 40px;
   background-color: #147de0;
+  color: #ffffff;
   font-size: 1.5rem;
   font-weight: 500;
   font-family: inherit;
@@ -155,6 +164,7 @@ button {
 }
 
 button:hover {
+  color: #ffffff;
   border-color: #ffffff;
   background-color: #e40d4d;
 }
@@ -162,6 +172,7 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+  color: #ffffff;
 }
 
 button::-moz-focus-inner {

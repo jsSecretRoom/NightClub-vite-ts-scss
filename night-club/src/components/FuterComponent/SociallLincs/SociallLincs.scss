@@ -1,0 +1,40 @@
+.company-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 0;
+    flex-grow:1;
+    .confidense-info {
+        text-align: left;
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 20px;
+        column-gap: 20px;
+        padding: 20px;
+        
+        .confidence {
+            h1{}
+            p{}
+        }
+    }
+    .sociall-lincs {
+        .links{
+            margin-top: 40px;
+            padding: 0 20px;
+            p{
+                text-align: center;
+                
+                
+            }
+            a{
+                img{
+                    width: 50px;
+                }
+                
+            }
+        }
+    }
+    
+}
+
+

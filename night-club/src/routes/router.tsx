@@ -30,20 +30,9 @@ export const router = createBrowserRouter([
         element: (
             <>
                 <HeaderComponent/>
-                
+                <HomePage/>
                 <FuterComponent/>
             </>
-        ), 
-        children: [
-            {
-                path: '/home',
-                element: (
-                    <>
-                        <HomePage/>
-                    </>
-                ),
-                
-            },
-        ]
+        ),
     }
 ])
