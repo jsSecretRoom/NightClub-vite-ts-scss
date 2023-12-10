@@ -7,8 +7,6 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 1);
 
-  background: url('./assets//img/bacground.svg') 0 0/cover no-repeat;
-  
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -22,6 +20,17 @@ body {
   justify-content: center;
   width: 100%;
   overflow-x: hidden;
+  background: url('./assets//img/bacground.svg') 0 0/cover no-repeat;
+}
+
+main{
+  width: 100vi;
+  height: auto;
+  background: linear-gradient(#000000, #41464D);
+  @media (min-width: 1920px) {
+    width: 1920px;
+  }
+  
 }
 
 nav, aside {
@@ -70,6 +79,10 @@ h1, h2, h3, h4, h5, h6 {
   font-size: inherit;
   font-weight: 400;
   color: rgb(255, 255, 255);
+}
+
+p{
+  font-size: 18px;
 }
 
 

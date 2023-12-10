@@ -1,8 +1,11 @@
 .registr-form{
     height: 100lvh;
+    width: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background: none;
+    background-color: none;
     .registration-conteiner{
         backdrop-filter: blur(10px);
         background-color: rgba(217, 0, 255, 0.2);

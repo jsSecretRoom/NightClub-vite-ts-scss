@@ -1,0 +1,18 @@
+.categories {
+    margin: 20px 0 40px 0;
+    .tabs-name{
+        display: flex;
+        justify-content: space-around;
+        .tab{
+            font-size: 26px;
+            border: 2px solid rgb(255, 255, 255);
+            border-radius: 50px;
+            padding: 0 20px;
+            
+
+        }
+        .tab.active{
+            background-color: crimson;
+        }
+    }
+}
