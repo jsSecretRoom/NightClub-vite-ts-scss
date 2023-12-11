@@ -1,0 +1,37 @@
+.club-evnts-conteiner {
+    margin: 40px 0;
+    .header-events {
+       
+        h2{}
+        .agitation{
+            display: flex;
+            justify-content: center;
+            column-gap: 10px;
+            flex-direction: column;
+            row-gap: 10px;
+            @media (min-width: 515px) {
+                flex-direction: row;
+            }
+            p{}
+        }
+       
+    }
+    .slider-events-info {
+        .img-item{
+            .foto{            
+                display: flex;
+                justify-content: center;
+                img{
+                    width: 300px;
+                }
+                @media (min-width: 515px) {
+                    img{
+                        width: auto;
+                    }
+                }
+            }
+
+        }
+    }
+}
+

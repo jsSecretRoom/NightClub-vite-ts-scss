@@ -11,6 +11,7 @@ import AutorizationPage from "../pages/AutorizationPage/AutorizationPage";
 import RegistrationPage from "../pages/RegistrationPage/RegistrationPage";
 import HomePage from "../pages/HomePage/HomePage";
 import KitchenPage from "../pages/KitchenPage/KitchenPage";
+import EntertainmentPage from "../pages/EntertainmentPage/EntertainmentPage";
 
 export const router = createBrowserRouter([
     {
@@ -48,11 +49,11 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/kitchen',
-                element: (
-                    <>
-                        <KitchenPage/>
-                    </>
-                ),
+                element: <KitchenPage/>,
+            },
+            {
+                path: '/entertainment',
+                element: <EntertainmentPage/>
                 
 
             }

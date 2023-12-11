@@ -4,10 +4,10 @@ function HeaderComponent() {
     return ( 
         <header>
             <nav>
-                <ul>
-                    <h5>Elite Express Club</h5>
-                    <li><NavLink to=''>Kitchen</NavLink></li>
-                    <li><NavLink to=''>Entertainment</NavLink></li>
+                <ul> 
+                    <NavLink to='/home'><h5>Elite Express Club</h5></NavLink>
+                    <li><NavLink to='/kitchen'>Kitchen</NavLink></li>
+                    <li><NavLink to='/entertainment'>Entertainment</NavLink></li>
                     <li><NavLink to=''>Concerts</NavLink></li>
                     <li><NavLink to=''>Events</NavLink></li>
                 </ul>

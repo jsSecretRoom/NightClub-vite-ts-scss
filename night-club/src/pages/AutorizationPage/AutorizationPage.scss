@@ -17,6 +17,14 @@
         justify-content: center;
         flex-direction: column;
         
+        min-width: 300px;
+        max-width: 450px;
+        height: 500px;
+        @media (min-width:650px) {
+            min-width: 600px;
+            height: 700px;
+        }
+        
         .apyRegistration{
             padding: 10px 0;
         }

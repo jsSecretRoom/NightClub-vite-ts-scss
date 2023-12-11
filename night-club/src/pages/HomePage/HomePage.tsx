@@ -1,8 +1,12 @@
 import SiteSlider from "../../components/SiteSlider/SiteSlider";
+
 import CongradulationClubComponent from "../../components/CongradulationClubComponent/CongradulationClubComponent";
 import SlidersCategories from "../../components/SiteSlider/SlidersCategories/SlidersCategories";
+import DecorationBottomLine from "../../components/DecorationBottomLine/DecorationBottomLine";
+import ClubEventsComponent from "../../components/ClubEventsComponent/ClubEventsComponent";
+import OrderTheTableComponent from "../../components/OrderTheTableComponent/OrderTheTableComponent";
 
-import { useState, useEffect } from "react";
+import { useState} from "react";
 
 import concertimg1 from '../../assets/img/slidersimg/Concertsimg/concrtimg1.svg'
 import concertimg2 from '../../assets/img/slidersimg/Concertsimg/concrtimg2.svg'
@@ -53,6 +57,10 @@ function HomePage() {
             <CongradulationClubComponent/>
             <SlidersCategories setSliderName={setSliderName} sliderName={sliderName}/>
             <SiteSlider sliderFoto={currentSlider} sliderName={sliderName} setSliderName={setSliderName}/>
+            <OrderTheTableComponent/>
+            <DecorationBottomLine/>
+            <ClubEventsComponent/>
+            <DecorationBottomLine/>
         </div>
     );
 }

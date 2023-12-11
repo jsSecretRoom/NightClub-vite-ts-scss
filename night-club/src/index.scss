@@ -20,7 +20,9 @@ body {
   justify-content: center;
   width: 100%;
   overflow-x: hidden;
-  background: url('./assets//img/bacground.svg') 0 0/cover no-repeat;
+  background: url('./assets//img/bacground.svg') no-repeat center center fixed;
+  
+  background-size: cover;
 }
 
 main{
@@ -81,8 +83,11 @@ h1, h2, h3, h4, h5, h6 {
   color: rgb(255, 255, 255);
 }
 
-p{
+p, a{
   font-size: 18px;
+  @media (min-width: 524px) {
+    font-size: 22px;
+  } 
 }
 
 
@@ -132,10 +137,11 @@ input{
   font-weight: 700;
   padding: 0 10px;
   margin: 2px;
-  width: 300px;
+  width: 260px;
   height: 25px;
-  @media (min-width: 425px) {
+  @media (min-width: 524px) {
     width: 400px;
+    height: 35px;
   } 
 }
 

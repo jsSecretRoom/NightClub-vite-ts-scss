@@ -1,33 +1,32 @@
-
-
-    .vido-conteiner{
-        position: relative;
+.vido-conteiner{
+    position: relative;
+    
+    video{
+        min-width: 1920px; 
+        height: 1080px;
+        filter: blur(20px);
+    }
+    .videoUi{
+        position: absolute;
+        width: 100%;
+        height: 100%;
         
-        video{
-            min-width: 1920px; 
-            height: 1080px;
-            filter: blur(20px);
-        }
-        .videoUi{
-            position: absolute;
-            width: 100%;
-            height: 100%;
+        top: 0;
+        left: 0;
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .congradulation-club{
             
-            top: 0;
-            left: 0;
-            
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            .congradulation-club{
-                
-                background-color: rgba(158, 255, 223, 0.3);
-                border-radius: 20px;
-                z-index: 2;
-                width: 95%;
-                height: 95%;
-            }
+            background-color: rgba(217, 0, 255, 0.2);
+            border: 2px solid white;
+            border-radius: 20px;
+            z-index: 2;
+            width: 95%;
+            height: 95%;
         }
     }
+}
 
 

@@ -1,15 +1,17 @@
 .slider-conteiner {
+    margin: 40px 0;
     .slider {
         width: 100vi; 
         height: auto;
         @media (min-width: 1920px) {
             width: 1920px; 
         }
-        .slick-slider{
-            .slick-list{
-                .slick-track{
-                    width: 1920px;
-                }
+        .img-item{
+            
+            img{
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
             }
         }
     }
