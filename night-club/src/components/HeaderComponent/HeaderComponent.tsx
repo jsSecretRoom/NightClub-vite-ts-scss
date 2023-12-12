@@ -5,7 +5,7 @@ function HeaderComponent() {
         <header>
             <nav>
                 <ul> 
-                    <NavLink to='/home'><h5>Elite Express Club</h5></NavLink>
+                    <NavLink to='/home/orderdata/:formattedDate'><h5>Elite Express Club</h5></NavLink>
                     <li><NavLink to='/kitchen'>Kitchen</NavLink></li>
                     <li><NavLink to='/entertainment'>Entertainment</NavLink></li>
                     <li><NavLink to=''>Concerts</NavLink></li>

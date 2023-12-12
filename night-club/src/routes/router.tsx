@@ -5,6 +5,7 @@ import PagesContent from "../pages/PagesContent/PagesContent";
 import FuterComponent from "../components/FuterComponent/FuterComponent";
 import HeaderComponent from "../components/HeaderComponent/HeaderComponent";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
+import DynamicClubRoomComponent from "../components/DynamicClubRoomComponent/DynamicClubRoomComponent";
 
 //SitePages
 import AutorizationPage from "../pages/AutorizationPage/AutorizationPage";
@@ -44,7 +45,12 @@ export const router = createBrowserRouter([
             {
                 path: '/home',
                 element: <HomePage/>,
-                
+                children: [
+                    {
+                        path: '/home/orderdata/:formattedDate',
+                        element: <DynamicClubRoomComponent/>,
+                    }
+                ]
 
             },
             {

@@ -6,6 +6,7 @@
     justify-content: center;
     background: none;
     background-color: none;
+    
     .registration-conteiner{
         backdrop-filter: blur(10px);
         background-color: rgba(217, 0, 255, 0.2);
@@ -18,10 +19,10 @@
         flex-direction: column;
         
         min-width: 300px;
-        max-width: 450px;
+        max-width: auto;
         height: 500px;
         @media (min-width:650px) {
-            min-width: 600px;
+            min-width: auto;
             height: 700px;
         }
         
@@ -34,10 +35,12 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                
                 .input-conteiner {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
+                    
                     input{}
                 }
                 .auth-info {

@@ -1,4 +1,8 @@
 import './OrderTheTableComponent.scss';
+import { Outlet } from 'react-router-dom';
+import ClubСalendar from './ClubСalendar/ClubСalendar';
+
+
 function OrderTheTableComponent() {
     return ( 
         <section className="order-the-table-conteiner">
@@ -6,20 +10,20 @@ function OrderTheTableComponent() {
             <div className='order-conteiner'>
                 
                 <form action="">
-                    <div className='form-data'>
-                        <input type="number" name="phoneNumber" id="" placeholder='Phone number'/>
-                        <input type="text" name="personName" id="" placeholder='Your name'/>
-                        <input type="text" name="personSurname" id="" placeholder='Your Surname'/>
-                        <button>Reserve</button>
+                    <div className='form-conteiner'>
+                        <ClubСalendar/>
+                        <div className='form-data'>
+                            <input type="number" name="phoneNumber" id="" placeholder='Phone number'/>
+                            <input type="text" name="personName" id="" placeholder='Your name'/>
+                            <input type="text" name="personSurname" id="" placeholder='Your Surname'/>
+                            <button type="submit">Reserve</button>
+                        </div>
+                        <div className='club-room'>
+                            <Outlet/>
+                        </div>
                     </div>
-
-                    <div className='Club-room'>
-
-                    </div>
-
+                    
                 </form>
-                
-
             </div>
         </section>
     );
