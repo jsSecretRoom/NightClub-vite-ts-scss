@@ -18,13 +18,10 @@ function DynamicClubRoomComponent() {
             </div>
             <div className='center'>
                 <div className='deco'>
-                    <div className='monitor'>
-                        <p>Monitor</p>
-                    </div>
-                    <div className='scene'>
-                        <p>Scene</p>
-                    </div>
+                    <div className='monitor'></div>
+                    <div className='scene'></div>
                 </div>
+                
                 <div className='order-info'>
                     <p className='time'>{`Date: ${formattedDate?.slice(0, 10)}`}</p>
                 </div>

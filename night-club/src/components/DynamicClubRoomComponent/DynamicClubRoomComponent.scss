@@ -1,45 +1,71 @@
 .tables-left, .tables-right {
-    width: 20%;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     row-gap: 20px;
-    button{
-        height: 130px;
-        width: 80px;
+    
+    button {
+
+        width: 8vw;
+        height: 12vw; 
+        
+
+        @media (min-width: 768px) {
+            width: 50px;
+            height: 100px;
+        }
+        @media (min-width: 1000px) {
+            width: 4vw;
+            height: 6vw;
+        }
+        @media (min-width: 1920px) {
+          width: 80px;
+          height: 130px;
+        }
     }
 }
 .center {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+    width: 60%;
+    
     .deco{
         
         .monitor{
             background-color: black;
             width: 100%;
-            height: 50px;
+            height: 3vw;
             margin: 10px 0;
-            p{
-                color: white;
+            @media (min-width: 1920px) {
+                width: 100%;
+                height: 50px;
             }
 
         }
         .scene{
             background-color: black;
             width: 100%;
-            height: 160px;
+            height: 7vw;
             border-radius: 0 0 100px 100px;
-            p{
-                color: white;
+
+            @media (min-width: 1920px) {
+                width: 100%;
+                height: 160px;
             }
         }
+
     }
-    .time{
-        color: black;
-        font-size: 44px;
+    .order-info{
+        
+        .time{
+            color: black;
+            font-size: 20px;
+        }
     }
+
     
     .tables-midle {
         display: flex;
@@ -49,13 +75,26 @@
         .line1, .line2 {
             display: flex;
             
-            button{
-                width: 130px;
-                height: 80px;
+            button {
+                width: 12vw;
+                height: 8vw; 
+
+                @media (min-width: 768px) {
+                    width: 100px;
+                    height:  50px;
+                }
+                @media (min-width: 1000px) {
+                    width: 6vw;
+                    height: 4vw;
+                }
+                @media (min-width: 1920px) {
+                    width: 130px;
+                    height: 80px;
+                }
             }
         }
         .line1{
-            padding-bottom: 50px;
+            padding-bottom: 4vw;
             column-gap: 20px;
             justify-content: center;
         }
@@ -73,5 +112,5 @@
     
 }
 .tables-right {
-
+    
 }

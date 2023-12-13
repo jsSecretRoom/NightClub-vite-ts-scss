@@ -2,14 +2,35 @@
     grid-column: 1;
     grid-row: 1;
     border-radius: 10px;
-    padding: 20px;
+    padding: 0px;
     display: flex;
     justify-content: center;
-    border: 1px solid white;
+    border: none;
+    aspect-ratio: 0/0;
+    @media (min-width: 1000px) {
+        aspect-ratio: 1/1;
+        padding: 20px;
+        border: 1px solid white;
+    }
+    @media (min-width: 1920px) {
+        aspect-ratio: 0/0;
+    }
     .react-calendar{
         background: none;
         border: none;
-        width: calc(1580px / 2);
+        min-width: 300px;
+        width: 60vw;
+        @media (min-width: 768px) {
+            width: 90vw;
+        }
+        @media (min-width: 1000px) {
+            width: 40vw;
+        }
+
+        @media (min-width: 1920px) {
+            width: calc(1580px / 2);
+        }
+        
         .react-calendar__navigation{
             .react-calendar__navigation__label{
                 width: 100%;
@@ -30,16 +51,29 @@
 }
 .react-calendar__month-view__weekdays__weekday{
     abbr{
-        font-size: 22px;
+        font-size: 14px;
+        @media (min-width: 768px) {
+            font-size: 22px;
+        }
     }
 }
 
 .react-calendar__month-view__days{
     button{
         border-radius: 0;
-        height: 100px;
-        width: 100px;
-        font-size: 26px;
+        height: auto;
+        width: auto;
+        font-size: 18px;
+        @media (min-width: 1000px) {
+            font-size: 26px;
+            height: 60px;
+            width: 60px;
+        }
+        @media (min-width: 1330px) {
+            height: 100px;
+            width: 100px;
+        }
+
     }
 }
 .react-calendar__tile:disabled {

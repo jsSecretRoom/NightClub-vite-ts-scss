@@ -1,17 +1,28 @@
 .order-the-table-conteiner {
-    padding: 20px;
+    padding: 0px;
+
+    @media (min-width: 475px) {
+        padding: 20px;
+    }
+
     h2{}
     .order-conteiner {
         form{
             .form-conteiner{
                 display: grid;
-                grid-template-columns: auto auto;
-                grid-template-rows: auto auto;
+                grid-template-columns: auto ;
+                grid-template-rows: auto auto auto;
                 column-gap: 20px;
                 row-gap: 20px;
+
+                @media (min-width: 1000px) {
+                    grid-template-columns: auto auto;
+                    grid-template-rows: auto auto;
+                }
+                
                 .form-data {
                     grid-column: 1;
-                    grid-row: 2;
+                    grid-row: 3;
 
                     display: flex;
                     flex-direction: column;
@@ -22,17 +33,34 @@
                         margin: 10px 0;
                     }
                     button{}
+                    @media (min-width: 1000px) {
+                        grid-column: 1 / 3;
+                        grid-row: 2;
+                    }
+                    @media (min-width: 1920px) {
+                        grid-column: 1;
+                        grid-row: 2;
+                    }
                 }
+
                 .club-room {           
-                    grid-column: 2;
-                    grid-row: 1 / 3;
+                    grid-column: 1;
+                    grid-row: 2;
                     flex-grow: 1;
                     background-color: white;
                     border-radius: 10px;
                     aspect-ratio: 1/1;
-                    width: 1000px;
+                    width: 100%;
                     display: flex;
-                    justify-content: space-between;
+                    justify-content: space-around;
+                    
+                    @media (min-width: 1000px) {
+                        grid-row: 1 / 3;
+                        grid-column: 2;
+                    }
+                    @media (min-width: 1920px) {
+                      width: 1000px;  
+                    }
                 }
             }
             
