@@ -15,8 +15,10 @@ function OrderTheTableComponent() {
                         <div className='form-data'>
                             <TimeRangeSlider/>
                             <input type="number" name="phoneNumber" id="" placeholder='Phone number'/>
-                            <input type="text" name="personName" id="" placeholder='Your name'/>
-                            <input type="text" name="personSurname" id="" placeholder='Your Surname'/>
+                            <div className='name-continer'>
+                                <input type="text" name="personName" id="" placeholder='Your name'/>
+                                <input type="text" name="personSurname" id="" placeholder='Your Surname'/>
+                            </div>
                             <button type="submit">Reserve</button>
                         </div>
                         <div className='club-room'>

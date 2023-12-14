@@ -88,7 +88,7 @@
                     height: 4vw;
                 }
                 @media (min-width: 1920px) {
-                    width: 130px;
+                    min-width: 130px;
                     height: 80px;
                 }
             }
@@ -101,6 +101,7 @@
         .line2{
             justify-content: space-around;
             column-gap: 20px;
+            
         }
 
 

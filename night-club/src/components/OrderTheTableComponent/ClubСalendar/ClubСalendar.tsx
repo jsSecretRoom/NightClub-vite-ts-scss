@@ -33,7 +33,7 @@ function ClubСalendar() {
     const formattedDate = roundedDate.toISOString();
   
     // Переадресация на новый URL с отформатированной и округленной датой
-    navigate(`/home/orderdata/${formattedDate}`);
+    navigate(`/home/orderdata/${formattedDate?.slice(0, 10)}`);
   }, [value, navigate]);
 
   return (

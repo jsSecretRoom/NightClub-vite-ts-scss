@@ -1,6 +1,6 @@
 .order-the-table-conteiner {
     padding: 0px;
-
+    
     @media (min-width: 475px) {
         padding: 20px;
     }
@@ -8,9 +8,10 @@
     h2{}
     .order-conteiner {
         form{
+            
             .form-conteiner{
                 display: grid;
-                grid-template-columns: auto ;
+                grid-template-columns: auto;
                 grid-template-rows: auto auto auto;
                 column-gap: 20px;
                 row-gap: 20px;
@@ -23,13 +24,31 @@
                 .form-data {
                     grid-column: 1;
                     grid-row: 3;
-
+                    padding: 10px;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                     justify-content: center;
-
+                    .name-continer{
+                        
+                        display: flex;
+                        justify-content: space-between;
+                        flex-direction: column;
+                        column-gap: 10px;
+                        width: 100%;
+                        input{
+                            width: 100%;
+                        }
+                        @media (min-width: 425px) {
+                            justify-content: space-between;
+                            flex-direction: row;
+                            input{
+                                width: 50%;
+                            }
+                        }
+                    }
                     input{
+                        width: 100%;
                         margin: 10px 0;
                     }
                     button{}
