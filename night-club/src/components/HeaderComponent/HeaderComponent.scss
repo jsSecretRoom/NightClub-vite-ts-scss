@@ -3,36 +3,58 @@ header{
     min-height: 80px;
     background-color: #242424;
     box-sizing: border-box;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 5;
     nav{
         padding: 20px 60px;
         display: flex;
-        justify-content: space-between;
-        .club-logo{
-            padding-right: 40px;
-        }
-        ul{
+        justify-content: center;
+
+        .nav-conteiner{
             display: flex;
-            flex-direction: row;
-            align-items: center;
-            column-gap: 40px;
-            li{
+            width: 100%;
+
+            @media (min-width: 1200px) {
+                justify-content: space-between;
+            }
+
+            .logo{
 
             }
-        }
-        .features{
-            display: flex;
-            align-items: center;
-            padding-left: 40px;
-            column-gap: 20px;
-            button{
-                width: auto;
-                height: auto;
-                padding: auto;
-                margin: auto;
-                
-                img{
-                    width: 40px;
-                    height: 40px;
+
+            .features-conteiner{
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                padding-left: 20px;
+                ul{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    column-gap: 40px;
+                    li{
+        
+                    }
+                }
+
+                .features{
+                    display: flex;
+                    align-items: center;
+                    padding-left: 40px;
+                    column-gap: 20px;
+                    button{
+                        width: auto;
+                        height: auto;
+                        padding: auto;
+                        margin: auto;
+                        
+                        img{
+                            width: 40px;
+                            height: 40px;
+                        }
+                    }
                 }
             }
         }
