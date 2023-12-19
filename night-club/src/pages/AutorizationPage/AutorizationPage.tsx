@@ -1,7 +1,32 @@
 import './AutorizationPage.scss';
+
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { useState } from "react";
+import { auth } from "../../firestoreSDK";
+
 import { NavLink } from 'react-router-dom';
 
 function AutorizationPage() {
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [error, setError] = useState("");
+
+    function logIn(e) {
+        e.preventDefault();
+
+        signInWithEmailAndPassword(auth, email, password)
+        .then((user) => {
+            console.log(user);
+            setError("");
+            setEmail("");
+            setPassword("");
+        })
+            .catch((error) => {
+                console.log(error);
+                setError("SORRY, COULDN'T FIND YOUR ACCOUNT")
+        });
+    }
+
     return ( 
         <main className='registr-form'>
             <div className='registration-conteiner'>
@@ -14,14 +39,28 @@ function AutorizationPage() {
                 <section className='form-conteiner'>
                     <form action="">
                         <div className='input-conteiner'>
-                            <input type="email" name="" id="" placeholder='Email'/>
-                            <input type="password" name="" id="" placeholder='Password'/>
+
+                            <input
+                                placeholder="Please enter your email"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                type="email"
+                            />
+
+                            <input
+                                placeholder="Please enter your password"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
+                                type="password"
+                            />
+                            {error ? <p style={{ color: "red" }}>{error}</p> : ""}
+
                         </div>
                         <div className='auth-info'>
                             <p>Not registered yet?</p>
                             <NavLink to="/registration">Register now!</NavLink>
                         </div>
-                        <NavLink to="/home/orderdata/:formattedDate"><button type='submit'>Log in</button></NavLink>
+                        <NavLink to="/home/orderdata/:formattedDate"><button onClick={logIn}>Login</button></NavLink>
                     </form>
                 </section>
             </div>

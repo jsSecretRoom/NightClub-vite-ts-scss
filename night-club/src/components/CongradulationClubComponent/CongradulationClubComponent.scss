@@ -7,6 +7,7 @@
         display: flex;
         justify-content: center;
         position: relative;
+        margin-bottom: 20px;
         @media (min-width: 1024px) {
             height: 1080px;
         }
@@ -19,13 +20,13 @@
             display: flex;
             justify-content: center;
             overflow: hidden;
-            filter: blur(20px);
+            filter: blur(30px);
         }
         video{
             width: 1820px;
             height: 1400px;
             @media (min-width: 870px) {
-                height: 1024px;
+                height: 1070px;
             }
         }
 
@@ -37,6 +38,7 @@
             row-gap: 1%;
             padding: 10px;
             height: auto;
+            
             @media (min-width: 870px) {
                 grid-template-columns: 24% 24% 24% 24%;
                 grid-template-rows: 375px auto auto auto auto;
@@ -47,7 +49,7 @@
                 grid-template-rows: 375px auto auto auto;
             }
             @media (min-width: 1725px) {
-                grid-template-columns: 24% 24% 24% 24%;
+                grid-template-columns: 25% 24% 24% 24%;
                 grid-template-rows: 375px auto;
             }
             
@@ -72,7 +74,11 @@
                     h2{
                         font-size: 40px;
                         text-align: center;
+                        &:hover {
+                            color: brown;
+                        }
                     } 
+
                 }
 
                 &:hover{
@@ -106,6 +112,7 @@
                 }
             }
             .congradulation-club3{
+                
                 grid-column: 1 / 5;
                 grid-row: 5 / 8;
                 @media (min-width: 870px) {

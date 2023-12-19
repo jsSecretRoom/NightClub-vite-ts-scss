@@ -6,7 +6,7 @@ import DecorationBottomLine from "../../components/DecorationBottomLine/Decorati
 import ClubEventsComponent from "../../components/ClubEventsComponent/ClubEventsComponent";
 import OrderTheTableComponent from "../../components/OrderTheTableComponent/OrderTheTableComponent";
 
-import { useState} from "react";
+import { useState, useEffect} from "react";
 
 import concertimg1 from '../../assets/img/slidersimg/Concertsimg/concrtimg1.svg'
 import concertimg2 from '../../assets/img/slidersimg/Concertsimg/concrtimg2.svg'
@@ -38,29 +38,52 @@ const privatePartiesSlider = [privatePartiesimg1, privatePartiesimg2, privatePar
 
 
 function HomePage() {
-    
     let [sliderName, setSliderName] = useState('first');
     let currentSlider = kitchenSlider;
 
-        if(sliderName === 'first') {
-            currentSlider = kitchenSlider;
-        } else if(sliderName === 'second') {
-            currentSlider = entertainmentSlider;
-        } else if(sliderName === 'third') {
-            currentSlider = concertSlider; 
-        } else {
-            currentSlider = privatePartiesSlider;
-        }
+    useEffect(() => {
+        const handleResize = () => {
+            const screenWidth = window.innerWidth;
+            if (screenWidth < 475) {
+                setSliderName('hidden');
+            } else {
+                setSliderName('first');
+            }
+        };
 
-    return ( 
+        handleResize();
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
+    if (sliderName === 'first') {
+        currentSlider = kitchenSlider;
+    } else if (sliderName === 'second') {
+        currentSlider = entertainmentSlider;
+    } else if (sliderName === 'third') {
+        currentSlider = concertSlider;
+    } else {
+        currentSlider = privatePartiesSlider;
+    }
+
+    return (
         <div className='home-page-container'>
-            <CongradulationClubComponent/>
-            <SlidersCategories setSliderName={setSliderName} sliderName={sliderName}/>
-            <SiteSlider sliderFoto={currentSlider} sliderName={sliderName} setSliderName={setSliderName}/>
-            <OrderTheTableComponent/>
-            <DecorationBottomLine/>
-            <ClubEventsComponent/>
-            <DecorationBottomLine/>
+            <CongradulationClubComponent />
+            
+            {sliderName !== 'hidden' && (
+                <>
+                    <SlidersCategories setSliderName={setSliderName} sliderName={sliderName} />
+                    <SiteSlider sliderFoto={currentSlider} sliderName={sliderName} setSliderName={setSliderName} />
+                </>
+            )}
+
+            <OrderTheTableComponent />
+            <DecorationBottomLine />
+            <ClubEventsComponent />
+            <DecorationBottomLine />
         </div>
     );
 }

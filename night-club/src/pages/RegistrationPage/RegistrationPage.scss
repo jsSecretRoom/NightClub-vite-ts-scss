@@ -1,0 +1,36 @@
+.autorization-form{
+    height: 100lvh;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: none;
+    background-color: none;
+    
+    .autorization-conteiner{
+        backdrop-filter: blur(10px);
+        background-color: rgba(217, 0, 255, 0.2);
+        border: 2px solid rgb(255, 255, 255);
+        border-radius: 20px;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        
+        min-width: 300px;
+        max-width: auto;
+        height: 500px;
+        @media (min-width:650px) {
+            min-width: auto;
+            height: 700px;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+            align-items: center;
+        }
+    }
+    
+}
