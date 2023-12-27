@@ -1,5 +1,5 @@
 import './OrderTheTableComponent.scss';
-import { Outlet } from 'react-router-dom';
+import DynamicClubRoomComponent from '../DynamicClubRoomComponent/DynamicClubRoomComponent';
 import ClubСalendar from './ClubСalendar/ClubСalendar';
 import TimeRangeSlider from '../TimeRangeSlider/TimeRangeSlider';
 
@@ -22,7 +22,7 @@ function OrderTheTableComponent() {
                             <button type="submit">Reserve</button>
                         </div>
                         <div className='club-room'>
-                            <Outlet/>
+                            <DynamicClubRoomComponent/>
                         </div>
                     </div>
                     

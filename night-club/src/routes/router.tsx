@@ -5,7 +5,6 @@ import PagesContent from "../pages/PagesContent/PagesContent";
 import FuterComponent from "../components/FuterComponent/FuterComponent";
 import HeaderComponent from "../components/HeaderComponent/HeaderComponent";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
-import DynamicClubRoomComponent from "../components/DynamicClubRoomComponent/DynamicClubRoomComponent";
 
 //SitePages
 import AutorizationPage from "../pages/AutorizationPage/AutorizationPage";
@@ -16,7 +15,31 @@ import EntertainmentPage from "../pages/EntertainmentPage/EntertainmentPage";
 
 export const router = createBrowserRouter([
     {
-        path: '',
+        path: '/',
+        element: (
+            <>
+                <HeaderComponent/>
+                <PagesContent/>
+                <FuterComponent/>
+            </>
+        ),
+        children: [
+            {
+                path: '/home/orderdata/:formattedDate',
+                element: <HomePage/>,
+            },
+            {
+                path: '/kitchen',
+                element: <KitchenPage/>,
+            },
+            {
+                path: '/entertainment',
+                element: <EntertainmentPage/>
+            }
+        ]
+    },
+    {
+        path: '/authorization',
         element: (
             <>
                 <AutorizationPage/>
@@ -31,39 +54,6 @@ export const router = createBrowserRouter([
                 <RegistrationPage/>
             </>
         )
-    },
-    {
-        path: '/',
-        element: (
-            <>
-                <HeaderComponent/>
-                <PagesContent/>
-                <FuterComponent/>
-            </>
-        ),
-        children: [
-            {
-                path: '/home',
-                element: <HomePage/>,
-                children: [
-                    {
-                        path: '/home/orderdata/:formattedDate',
-                        element: <DynamicClubRoomComponent/>,
-                    }
-                ]
-
-            },
-            {
-                path: '/kitchen',
-                element: <KitchenPage/>,
-            },
-            {
-                path: '/entertainment',
-                element: <EntertainmentPage/>
-                
-
-            }
-        ]
     },
     {
         path: '*',

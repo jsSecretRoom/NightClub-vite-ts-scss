@@ -1,0 +1,30 @@
+.form-conteiner{
+            
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        .input-conteiner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            input{}
+        }
+        .auth-info {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            p{
+                
+            }
+            a{
+                
+            }
+        }
+        button{
+            margin: 20px 0;
+        }
+    }
+}
